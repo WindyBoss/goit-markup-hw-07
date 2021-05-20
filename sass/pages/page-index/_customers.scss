@@ -1,0 +1,46 @@
+.customers-section {
+    text-align: center;
+    margin-top: 94px;
+    margin-bottom: 94px;
+
+
+    &__title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    font-weight: bold;
+    color: getColor("second-title-text");
+    }
+
+    &__list {
+    @include centeredFlex(flex, center);
+    }
+
+    &__logo {
+
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+
+    &__icon {
+        @include centeredFlex(inline-flex, center);
+
+        width: 170px;
+        height: 92px;
+        padding: 16px 32px;
+
+        fill: getColor("icon");
+
+        border: 1px solid getColor("icon");
+        border-radius: 4px;
+
+        @include transform(all);
+
+        .customers-section__logo:focus &,
+        .customers-section__logo:hover & {
+            border: 1px solid getColor("accent-button");
+            fill: getColor("accent-button");
+        }
+    }
+
+}

@@ -1,0 +1,12 @@
+.logo {
+    @include centeredFlex(flex, center);
+    font-family: $logo-font;
+    font-size: 26px;
+    color: getColor("second-title-text");
+    margin-right: 93px;
+
+
+    &--blue {
+        color: getColor("accent-text");
+    }
+}

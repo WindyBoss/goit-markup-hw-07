@@ -1,0 +1,34 @@
+.page-header__contact {
+    @include centeredFlex (flex, center);
+    margin-right: 12px;
+    margin-left: auto;
+}
+
+.contact__info {
+    @include centeredFlex (flex, center);
+    margin-right: 30px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+
+    color: getColor("primary-text");
+
+    @include transform(color);
+
+    &:hover,
+    &:focus{
+        color: getColor("accent-text")
+    }
+
+}
+
+.contact__icon {
+    margin-right: 10px;
+    fill: getColor("primary-text");
+
+    @include transform(fill);
+
+    .contact__info:hover &,
+    .contact__info:focus & {
+        fill: getColor("accent-text");
+    }
+}

@@ -1,0 +1,40 @@
+.page-portfolio {
+    display: block;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 174px;
+    margin-bottom: 94px;
+}
+
+    .filter-section {
+        @include centeredFlex(flex, center);
+        margin-bottom: 50px;
+
+
+    &__element:not(:last-child) {
+        margin-right: 8px;
+    }
+
+    &__button {
+        @extend %button;
+        padding: 6px 22px;
+    
+        border: none;
+
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.62;
+        background-color: getColor("section-background");
+
+        @include transform(color);
+        @include transform(background-color);
+
+        &:hover,
+        &:focus {
+            color: getColor("primary-title-text");
+            background-color: getColor("accent-button");
+        }
+    }
+
+}

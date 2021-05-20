@@ -1,0 +1,34 @@
+.checkbox {
+    @include centeredFlex(flex, center);
+
+    &__label {
+        font-size: 14px;
+        line-height: 1.71;
+        color: getColor("primary-text");
+    }
+  
+    &__link {
+        color: getColor("accent-text");
+        text-decoration: underline;
+    }
+  
+    &__icon {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    margin-right: 7px;
+    border-radius: 2px;
+    border: 2px solid getColor("second-title-text");
+    background-color: getColor("object-bg");
+    fill: getColor("object-bg");
+  
+    @include transform(background-color);
+
+    .checkbox__visually-hidden:checked + & {
+        border: 1px solid getColor("accent-button");
+        background-color: getColor("accent-button");
+        fill: getColor("object-bg");
+    }
+  }
+  
+}

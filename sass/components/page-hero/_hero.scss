@@ -1,0 +1,54 @@
+.page-hero {
+  width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  
+  text-align: center;
+  
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url('../images/index.html/hero-picture.jpg');
+
+
+  &__title {
+    width: 696px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+  
+    text-transform: uppercase;
+    color:getColor("primary-title-text");
+  }
+
+  &__button {
+    display: inline-block;
+    padding: 10px 41px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+
+    @extend %button; 
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    color: getColor("primary-title-text");
+    background-color: getColor("accent-button");
+
+    &:hover,
+    &:focus {
+      color: getColor("primary-title-text");
+      background-color: getColor("accent-button");
+    }
+  }
+
+}
